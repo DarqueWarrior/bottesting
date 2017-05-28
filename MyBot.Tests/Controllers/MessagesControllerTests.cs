@@ -42,7 +42,7 @@ namespace MyBot.Tests.Controllers
             // Assert
             Assert.IsTrue(sendAsyncCalled, "SendAsync was not called");
             Assert.IsTrue(isCorrectDialog, "The wrong dialog was provided");
-            Assert.AreEqual(task.StatusCode, System.Net.HttpStatusCode.OK, "The wrong status code was returned");
+            Assert.AreEqual(System.Net.HttpStatusCode.OK, task.StatusCode, "The wrong status code was returned");
          }
       }
 
@@ -60,7 +60,7 @@ namespace MyBot.Tests.Controllers
          var task = await target.Post(activity);
 
          // Assert
-         Assert.AreEqual(task.StatusCode, System.Net.HttpStatusCode.OK);
+         Assert.AreEqual(System.Net.HttpStatusCode.OK, task.StatusCode);
       }
 
       [TestMethod]
@@ -77,7 +77,7 @@ namespace MyBot.Tests.Controllers
          var task = await target.Post(activity);
 
          // Assert
-         Assert.AreEqual(task.StatusCode, System.Net.HttpStatusCode.OK);
+         Assert.AreEqual(System.Net.HttpStatusCode.OK, task.StatusCode);
       }
 
       [TestMethod]
@@ -94,7 +94,7 @@ namespace MyBot.Tests.Controllers
          var task = await target.Post(activity);
 
          // Assert
-         Assert.AreEqual(task.StatusCode, System.Net.HttpStatusCode.OK);
+         Assert.AreEqual(System.Net.HttpStatusCode.OK, task.StatusCode);
       }
 
       [TestMethod]
@@ -111,7 +111,7 @@ namespace MyBot.Tests.Controllers
          var task = await target.Post(activity);
 
          // Assert
-         Assert.AreEqual(task.StatusCode, System.Net.HttpStatusCode.OK);
+         Assert.AreEqual(System.Net.HttpStatusCode.OK, task.StatusCode);
       }
 
       [TestMethod]
@@ -128,7 +128,7 @@ namespace MyBot.Tests.Controllers
          var task = await target.Post(activity);
 
          // Assert
-         Assert.AreEqual(task.StatusCode, System.Net.HttpStatusCode.OK);
+         Assert.AreEqual(System.Net.HttpStatusCode.OK, task.StatusCode);
       }
    }
 }
